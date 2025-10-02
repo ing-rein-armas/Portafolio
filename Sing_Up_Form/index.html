@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css"/>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Sign Up Today</h1>
+        <form id="form" >
+            <!-- Full Name -->
+             <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" placeholder="Full name" name="name" required minlength="6" maxlength="100">
+             </div>
+             <!-- Phone -->
+             <div class="form-group">
+                <label for="phone">Phone number</label>
+                <input type="tel" id="phone" placeholder="000-000-0000" name="phone" required pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+             </div>
+             <!-- Email Address -->
+              <div class="form-group">
+                <label for="email">e-mail address</label>
+                <input type="email" id="email" placeholder="email@address.com" name="email">
+             </div>
+             <!-- Website URL -->
+              <div class="form-group">
+                <label for="website">Website URL</label>
+                <input type="url" id="website" placeholder="http://mywebsite.com" name="website">
+             </div>
+             <!-- password -->
+              <div class="form-group">
+                <label for="password1">Password</label>
+                <input type="password" id="password1" placeholder="Create Password (Min. 8 characters)" required pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$" 
+                title="Please include at least 1 uppercase, 1 lowercase and 1 number">
+             </div>
+
+             <div class="form-group">
+                <label for="password2">Confirm Password</label>
+                <input type="password" id="password2" placeholder="Confirm Password" name="password" required pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$">
+             </div>
+             <button type="submit">Register</button>
+        </form>
+        <div class="message-container">
+            <h3 id="message">Don't Hesitate!</h3>
+        </div>
+        
+    </div>
+    <!-- Script -->
+    <script src="script.js"></script>
+</body>
+</html>
